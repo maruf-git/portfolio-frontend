@@ -1,0 +1,26 @@
+/* fonts */
+@import url('https://fonts.cdnfonts.com/css/agustina');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* tailwindcss v2.2.16 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom fonts */
+.font-logo {
+    font-family: 'Agustina', sans-serif;
+}
+.font-main{
+    font-family: "Montserrat", serif;
+}
+/* background color */
+.bg-portDark{
+    background-color: #171c28
+}
+/* theme */
+.style-dark{
+    background-color: #171c28;
+    color: #fff;
+}
+
+/* nav link styles */
