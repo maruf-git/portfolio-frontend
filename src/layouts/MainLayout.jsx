@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Container from "../components/Container";
+import Headroom from "react-headroom";
 
 
 const MainLayout = () => {
@@ -9,13 +10,18 @@ const MainLayout = () => {
             {/* header section */}
             <header>
                 {/* navbar */}
-                <nav>
-                    <Navbar></Navbar>
-                </nav>
-
+                <Headroom
+                    style={{
+                        zIndex: '1000'
+                    }}
+                >
+                    <nav>
+                        <Navbar></Navbar>
+                    </nav>
+                </Headroom>
             </header>
             {/* main section */}
-            <main className="pt-[112px]">
+            <main className="">
                 <Outlet></Outlet>
             </main>
             {/* footer section */}

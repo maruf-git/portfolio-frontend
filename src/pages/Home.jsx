@@ -51,15 +51,15 @@ const Home = () => {
             {/* greeting section */}
             <section className="py-10">
                 <Container>
-                    <div className=" flex ">
+                    <div className="flex flex-col items-center md:flex-row md:items-start my-auto">
                         {/* greeting text */}
-                        <div className="w-1/2 ">
+                        <div className="w-full md:w-1/2 my-auto">
                             {/* name */}
-                            <h1 className=" text-7xl">Hi, I'm Md Maruf Ur Rahman Munna</h1>
+                            <h1 className="text-5xl lg:text-7xl">Hi, I'm Md Maruf Ur Rahman Munna</h1>
                             {/* tags */}
                             <p className="text-3xl mt-10">Web Developer | Problem Solver | Competitive Programmer | Solved 500+ problems on various online judges.</p>
                             {/* social links */}
-                            <div className="flex gap-2 my-10">
+                            <div className="flex gap-2 my-10 flex-wrap">
                                 {/* github */}
                                 <a href='https://github.com/maruf-git' className="p-3  bg-[#333333] hover:bg-[#000000] transition duration-700 rounded-full" target="_blank">
                                     <FaGithub size={25} />
@@ -91,10 +91,10 @@ const Home = () => {
                             </div>
                         </div>
                         {/* greeting image */}
-                        <div className="w-1/2  overflow-hidden flex justify-center items-center">
+                        <div className="w-full md:w-1/2 overflow-hidden flex justify-center items-center my-auto md:h-[550px] lg:h-[600px]">
                             <Lottie
                                 animationData={greetingDark}
-                                className="object-cover scale-150 max-w-none"
+                                className="object-cover w-full md:scale-[2] lg:scale-[1.8] xl:scale-[1.5] max-w-none"
                             />
                         </div>
                     </div>
@@ -102,20 +102,20 @@ const Home = () => {
             </section>
 
             {/* skills section */}
-            <section id="skills" className="pt-40">
+            <section id="skills" className="pt-10 md:pt-40">
                 <Container>
-                    <div className="flex  gap-14">
+                    <div className="flex flex-col justify-center items-center md:flex-row md:gap-14 md:items-start">
                         {/* developer lottie */}
-                        <div className="w-1/2  overflow-hidden flex justify-center items-center">
+                        <div className="w-full h-full md:w-1/2 order-2 md:order-1  overflow-hidden flex justify-center items-center">
                             <Lottie
                                 animationData={developerDark}
-                                className="object-cover scale-150 max-w-none"
+                                className="object-cover md:h-[400px] md:scale-[1.8] lg:scale-150 max-w-none"
                             />
                         </div>
                         {/* Skill text */}
-                        <div className="w-1/2 ">
+                        <div className="w-full order-1 md:w-1/2 md:order-2 flex flex-col justify-center items-center md:items-start">
                             {/* Skills title */}
-                            <h1 className=" text-6xl">Skills</h1>
+                            <h1 className=" text-6xl text-center">Skills</h1>
                             {/* skills list */}
                             <div className="mt-10 space-y-1">
                                 {/* languages */}
@@ -138,19 +138,19 @@ const Home = () => {
             </section>
 
             {/* education section */}
-            <section id="education" className="pt-40">
+            <section id="education" className="pt-20 md:pt-40">
                 <Container>
-                    <h1 className="text-6xl">Education</h1>
+                    <h1 className="text-4xl md:text-6xl text-center md:text-start">Education</h1>
                     {/* institutions */}
                     <div className="mt-10 space-y-5 w-full group">
                         {/* university */}
-                        <div className="flex gap-5">
+                        <div className="flex flex-col items-center md:flex-start md:flex-row md:gap-5">
                             {/* logo */}
                             <div>
                                 <img className="w-28 object-cover" src={hstuLogo} alt="HSTU logo" />
                             </div>
                             {/* university details */}
-                            <div className="space-y-1">
+                            <div className="space-y-1 text-center md:text-start">
                                 <h1 className="text-3xl font-semibold">Hajee Mohammad Danesh Science and Technology University</h1>
                                 <p className="text-xl ">Bachelor of Science in Computer Science and Engineering</p>
                                 <p>February 2021 - Present</p>
@@ -166,11 +166,11 @@ const Home = () => {
             </section>
 
             {/* problem solving section*/}
-            <section id="problem-solving" className="pt-40">
+            <section id="problem-solving" className="pt-20 md:pt-40">
                 <Container>
                     {/* title */}
-                    <h1 className="text-6xl">Problem Solving Activities</h1>
-                    <p className="my-5 text-xl">My Competitive Programming Journey</p>
+                    <h1 className="text-4xl md:text-6xl text-center md:text-start">Problem Solving Activities</h1>
+                    <p className="my-5 text-xl text-center md:text-start">My Competitive Programming Journey</p>
                     {/* problem solving cards */}
                     <div className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
                         {/* codeforces */}
@@ -217,16 +217,16 @@ const Home = () => {
             </section>
 
             {/* projects section*/}
-            <section id="projects" className="pt-40">
+            <section id="projects" className="pt-20 md:pt-40">
                 <Container>
                     {/* title */}
-                    <h1 className="text-6xl">Projects</h1>
+                    <h1 className="text-4xl md:text-6xl text-center md:text-start">Projects</h1>
                     {/* projects container */}
                     <div className="mt-10 space-y-10">
                         {/* individual projects/view blog site */}
-                        <div className="flex gap-14 border rounded-lg p-10 problem-solving-card">
+                        <div className="flex flex-col gap-5 lg:flex-row lg:gap-14 border rounded-lg p-10 problem-solving-card">
                             {/*left side/ swiper */}
-                            <div className="w-[40%]">
+                            <div className="w-full lg:w-[40%]">
                                 <Swiper
                                     spaceBetween={30}
                                     centeredSlides={true}
@@ -257,15 +257,15 @@ const Home = () => {
 
                                 </Swiper>
                                 {/* preview and source code button */}
-                                <div className="flex flex-row gap-5 justify-center mt-5">
-                                    <a className="btn bg-[#0745ad] text-white hover:text-[#0745ad] hover:bg-white border-none text-xl" href="https://discount-pro-200b8.web.app/" target="_blank">Live Preview</a>
+                                <div className="flex flex-col sm:flex-row gap-5 justify-center mt-5">
+                                    <a className="btn bg-[#0745ad] text-white hover:text-[#0745ad] hover:bg-white border-none text-xl" href="https://view-blog-website.web.app/" target="_blank">Live Preview</a>
 
-                                    <a className="btn bg-[#0745ad] text-white hover:text-[#0745ad] hover:bg-white border-none text-xl" href="https://github.com/programming-hero-web-course1/b10-a9-authentication-maruf-git" target="_blank">Source Code</a>
+                                    <a className="btn bg-[#0745ad] text-white hover:text-[#0745ad] hover:bg-white border-none text-xl" href="https://github.com/programming-hero-web-course2/b10a11-client-side-maruf-git" target="_blank">Source Code</a>
                                 </div>
                             </div>
                             {/* project details */}
                             <div>
-                                <h1 className="text-5xl">TheView - A User Friendly Blog Website</h1>
+                                <h1 className="text-3xl md:text-5xl">TheView - A User Friendly Blog Website</h1>
                                 <p className="mt-2 mb-5 text-xl">TheView is a Full-Stack Project. The website has dynamic web pages where users can post blog, comment on blog , add blog to wishlist etc. many more.</p>
                                 <ul className="list-disc list-inside text-xl  space-y-1">
                                     <li className="">Users can post blog, comment on blog and add blog to their wishlist.</li>
@@ -277,9 +277,9 @@ const Home = () => {
                             </div>
                         </div>
                         {/* individual projects/ chill gamer site */}
-                        <div className="flex gap-14 border rounded-lg p-10 problem-solving-card">
+                        <div className="flex flex-col gap-5 lg:flex-row lg:gap-14 border rounded-lg p-10 problem-solving-card">
                             {/* swiper */}
-                            <div className="w-[40%]">
+                            <div className="w-full lg:w-[40%]">
                                 <Swiper
                                     spaceBetween={30}
                                     centeredSlides={true}
@@ -306,10 +306,9 @@ const Home = () => {
                                     <SwiperSlide>
                                         <img className=" w-full object-cover" src={game4} alt="" />
                                     </SwiperSlide>
-
-
                                 </Swiper>
-                                <div className="flex flex-row gap-5 justify-center mt-5">
+                                {/* live preview and source code button */}
+                                <div className="flex flex-col sm:flex-row gap-5 justify-center mt-5">
                                     <a className="btn bg-[#0745ad] text-white hover:text-[#0745ad] hover:bg-white border-none text-xl" href="https://game-review-4919a.web.app/" target="_blank">Live Preview</a>
 
                                     <a className="btn bg-[#0745ad] text-white hover:text-[#0745ad] hover:bg-white border-none text-xl" href="https://github.com/programming-hero-web-course2/b10-a10-client-side-maruf-git" target="_blank">Source Code</a>
@@ -317,7 +316,7 @@ const Home = () => {
                             </div>
                             {/* project details */}
                             <div>
-                                <h1 className="text-5xl">Chill Gamer - A game review application</h1>
+                                <h1 className="text-3xl md:text-5xl">Chill Gamer - A game review application</h1>
                                 <p className="mt-2 mb-5 text-xl">This is a Full-Stack Project. The goal of this application is to provide a platform where users can explore and share game reviews.</p>
                                 <ul className="list-disc list-inside text-xl  space-y-1">
                                     <li className="">Users can add new review and update it.</li>
@@ -329,9 +328,9 @@ const Home = () => {
                             </div>
                         </div>
                         {/* individual projects/discount site */}
-                        <div className="flex gap-14 border rounded-lg p-10 problem-solving-card">
+                        <div className="flex flex-col gap-5 lg:flex-row lg:gap-14 border rounded-lg p-10 problem-solving-card">
                             {/*left side/ swiper */}
-                            <div className="w-[40%]">
+                            <div className="w-full lg:w-[40%]">
                                 <Swiper
                                     spaceBetween={30}
                                     centeredSlides={true}
@@ -360,17 +359,17 @@ const Home = () => {
                                     </SwiperSlide>
 
                                 </Swiper>
-                                {/* project details */}
-                                <div className="flex flex-row gap-5 justify-center mt-5">
-                                    <a className="btn bg-[#0745ad] text-white hover:text-[#0745ad] hover:bg-white border-none text-xl" href="https://view-blog-website.web.app" target="_blank">Live Preview</a>
+                                {/*live preview and source code button */}
+                                <div className="flex flex-col sm:flex-row gap-5 justify-center mt-5">
+                                    <a className="btn bg-[#0745ad] text-white hover:text-[#0745ad] hover:bg-white border-none text-xl" href="https://discount-pro-200b8.web.app/" target="_blank">Live Preview</a>
 
-                                    <a className="btn bg-[#0745ad] text-white hover:text-[#0745ad] hover:bg-white border-none text-xl" href="https://github.com/programming-hero-web-course2/b10a11-client-side-maruf-git" target="_blank">Source Code</a>
+                                    <a className="btn bg-[#0745ad] text-white hover:text-[#0745ad] hover:bg-white border-none text-xl" href="https://github.com/programming-hero-web-course1/b10-a9-authentication-maruf-git" target="_blank">Source Code</a>
                                 </div>
                             </div>
                             {/* right side/ project details */}
                             <div>
                                 {/*  */}
-                                <h1 className="text-5xl">Discount Pro -A Coupon Collecting Application</h1>
+                                <h1 className="text-3xl md:text-5xl">Discount Pro -A Coupon Collecting Application</h1>
                                 <p className="mt-2 mb-5 text-xl">This project is a simple Coupon Collecting Application designed to help users easily find and use discount coupons for popular e-commerce shops. </p>
                                 <ul className="list-disc list-inside text-xl  space-y-1">
                                     <li className="">Users can find coupons, collect coupons easily.</li>
@@ -392,11 +391,11 @@ const Home = () => {
             </section> */}
 
             {/* social section */}
-            <section id="social" className="pt-40">
+            <section id="social" className="pt-20 md:pt-40">
                 <Container>
                     {/* title */}
-                    <h1 className="text-6xl">Social Media Connections</h1>
-                    <p className="my-5 text-xl">I love to connect with people with similar interests. Let's connect if you want.</p>
+                    <h1 className="text-4xl md:text-6xl text-center md:text-start">Social Media Connections</h1>
+                    <p className="my-5 text-xl text-center md:text-start">I love to connect with people with similar interests. Let's connect if you want.</p>
 
                     {/* social cards container */}
                     <div className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
@@ -454,52 +453,45 @@ const Home = () => {
             </section>
 
             {/* contact me */}
-            <section id="contact-me" className="pt-40">
+            <section id="contact-me" className="pt-20 md:pt-40">
                 <Container>
-                    <div className="flex gap-44 items-center">
-                        {/* contact me left */}
-                        <div>
-                            {/* title */}
-                            <h1 className="text-6xl">Contact Me</h1>
-                            <p className="my-5 text-xl uppercase">If you want to hire me or have other queries, then knock me anytime. I try to reply within 24 hours.</p>
-                            <a href="mailto:munna.csehstu@gmail.com" className="text-5xl hover:text-[#0745ad]">munna.csehstu@gmail.com</a>
-                            {/* social links */}
-                            <div className="flex gap-2 my-10">
-                                {/* github */}
-                                <a href='https://github.com/maruf-git' className="p-3  bg-[#333333] hover:bg-[#000000] transition duration-700 rounded-full" target="_blank">
-                                    <FaGithub size={25} />
-                                </a>
-                                {/* linkedin */}
-                                <a href="https://www.linkedin.com" className="p-3  bg-[#0e76a8] hover:bg-[#000000] transition duration-500 rounded-full" target="_blank">
-                                    <FaLinkedinIn size={25} />
-                                </a>
-                                {/* gmail */}
-                                <a href="mailto:munna.csehstu@gmail.com" className="p-3  bg-[#ea4336] hover:bg-[#000000] transition duration-700 rounded-full" target="_blank">
-                                    <IoMail size={25} />
-                                </a>
-                                {/* facebook */}
-                                <a href='https://www.facebook.com/maroof.ahmed.446218' className="p-3  bg-[#3c5998] hover:bg-[#000000] transition duration-700 rounded-full">
-                                    <FaFacebookF size={25} />
-                                </a>
-                                {/* twitter */}
-                                <a href='https://x.com' className="p-3  bg-[#333333] hover:bg-[#000000] transition duration-700 rounded-full">
-                                    <FaXTwitter size={25} />
-                                </a>
-                                {/* instagram */}
-                                <a href='https://www.instagram.com' className="p-3  bg-[#c13684] hover:bg-[#000000] transition duration-700 rounded-full">
-                                    <FaInstagram size={25} />
-                                </a>
-                            </div>
-                        </div>
-                        {/* contact me right / gmail lottie*/}
-                        <div>
-
+                    <div className="text-center md:text-start lg:text-start flex flex-col items-center md:items-start">
+                        {/* title */}
+                        <h1 className="text-4xl md:text-6xl">Contact Me</h1>
+                        <p className="my-5 text-xl uppercase">If you want to hire me or have other queries, then knock me anytime. I try to reply within 24 hours.</p>
+                        <a href="mailto:munna.csehstu@gmail.com" className="text-xl sm:text-3xl lg:text-5xl hover:text-[#0745ad]">munna.csehstu@gmail.com</a>
+                        {/* social links */}
+                        <div className="flex gap-2 my-10 flex-wrap">
+                            {/* github */}
+                            <a href='https://github.com/maruf-git' className="p-3  bg-[#333333] hover:bg-[#000000] transition duration-700 rounded-full" target="_blank">
+                                <FaGithub size={25} />
+                            </a>
+                            {/* linkedin */}
+                            <a href="https://www.linkedin.com" className="p-3  bg-[#0e76a8] hover:bg-[#000000] transition duration-500 rounded-full" target="_blank">
+                                <FaLinkedinIn size={25} />
+                            </a>
+                            {/* gmail */}
+                            <a href="mailto:munna.csehstu@gmail.com" className="p-3  bg-[#ea4336] hover:bg-[#000000] transition duration-700 rounded-full" target="_blank">
+                                <IoMail size={25} />
+                            </a>
+                            {/* facebook */}
+                            <a href='https://www.facebook.com/maroof.ahmed.446218' className="p-3  bg-[#3c5998] hover:bg-[#000000] transition duration-700 rounded-full">
+                                <FaFacebookF size={25} />
+                            </a>
+                            {/* twitter */}
+                            <a href='https://x.com' className="p-3  bg-[#333333] hover:bg-[#000000] transition duration-700 rounded-full">
+                                <FaXTwitter size={25} />
+                            </a>
+                            {/* instagram */}
+                            <a href='https://www.instagram.com' className="p-3  bg-[#c13684] hover:bg-[#000000] transition duration-700 rounded-full">
+                                <FaInstagram size={25} />
+                            </a>
                         </div>
                     </div>
                 </Container>
             </section>
 
-            
+
         </div>
     );
 };

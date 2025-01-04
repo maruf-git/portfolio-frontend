@@ -38,3 +38,6 @@ html {
 .problem-solving-card:hover{
     box-shadow: 0 10px 30px 0px #aba9af;
 }
+.header-z-index {
+    z-index: 1000;
+}

@@ -1,9 +1,15 @@
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import Hamburger from 'hamburger-react';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 
 const Navbar = () => {
     return (
-        <div className="max-w-[1520px] mx-auto px-4 xl:px-0 relative">
-            <div className="px-5 py-4 flex items-center justify-between fixed top-0 z-10 bg-portDark w-full">
+        //    relative
+        <div className="max-w-[1520px] mx-auto ">
+            {/* fixed top-0 z-10 */}
+            {/* desktop menu */}
+            <div className="px-5 py-4 hidden md:flex items-center justify-between  bg-portDark w-full  ">
                 {/* logo name*/}
                 <div>
                     <h1 className="font-logo font-bold text-2xl px-2.5">Maruf Ur Rahman</h1>
@@ -38,16 +44,16 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <a className="hover:bg-[#0745ad] px-5 py-4 text-xl"  href='#skills'>Skills</a>
+                            <a className="hover:bg-[#0745ad] px-5 py-4 text-xl" href='#skills'>Skills</a>
                         </li>
                         <li>
                             <a className="hover:bg-[#0745ad] px-5 py-4 text-xl" href="#education">Education</a>
                         </li>
                         <li>
-                            <a className="hover:bg-[#0745ad] px-5 py-4 text-xl"  href='#problem-solving'>Problem Solving</a>
+                            <a className="hover:bg-[#0745ad] px-5 py-4 text-xl" href='#problem-solving'>Problem Solving</a>
                         </li>
                         <li>
-                            <a  className="hover:bg-[#0745ad] px-5 py-4 text-xl" href='#projects'>Projects</a>
+                            <a className="hover:bg-[#0745ad] px-5 py-4 text-xl" href='#projects'>Projects</a>
                         </li>
                         <li>
                             <a className="hover:bg-[#0745ad] px-5 py-4 text-xl" href='#blogs'>Blogs</a>
@@ -59,10 +65,89 @@ const Navbar = () => {
                             <a className="hover:bg-[#0745ad] px-5 py-4 text-xl" href='#contact-me'>Contact Me</a>
                         </li>
                         <li>
-                            <a  className="hover:bg-[#0745ad] px-5 py-4 text-xl" href='https://docs.google.com/document/d/1uA3zJ9yxOoKW30vinK4DN5E14fQolwF2KDEa_FfiwyU/edit?usp=sharing' target="_blank">Resume</a>
+                            <a className="hover:bg-[#0745ad] px-5 py-4 text-xl" href='https://docs.google.com/document/d/1uA3zJ9yxOoKW30vinK4DN5E14fQolwF2KDEa_FfiwyU/edit?usp=sharing' target="_blank">Resume</a>
                         </li>
 
                     </ul>
+                </div>
+            </div>
+            {/* mobile menu */}
+            <div className="  py-4 flex md:hidden items-center justify-between  bg-portDark overflow-hidden">
+                {/* logo name*/}
+                <div>
+                    <h1 className="font-logo font-bold text-2xl px-2.5">Maruf Ur <br /> Rahman</h1>
+                </div>
+                {/* hamburger menu */}
+                <div className='px-2'>
+                    <Menu>
+                        <MenuButton >
+                            <GiHamburgerMenu size={30} className='' />
+                        </MenuButton>
+
+                        <MenuItems
+                            transition
+                            anchor="bottom end"
+                            className="w-full pt-10 origin-top-right rounded-xl border border-white/5 bg-[#171c28] p-1 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+                        >
+
+                            <MenuItem>
+                                <a href='#skills' className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+                                    {/* <PencilIcon className="size-4 fill-white/30" /> */}
+                                    Skills
+                                    <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">⌘E</kbd>
+                                </a>
+                            </MenuItem>
+                            <div className="my-1 h-px bg-white/5" />
+                            <MenuItem>
+                                <a href="#education" className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+                                    {/* <Square2StackIcon className="size-4 fill-white/30" /> */}
+                                    Education
+                                    <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">⌘D</kbd>
+                                </a>
+                            </MenuItem>
+                            <div className="my-1 h-px bg-white/5" />
+                            <MenuItem>
+                                <a href="#problem-solving" className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+                                    {/* <ArchiveBoxXMarkIcon className="size-4 fill-white/30" /> */}
+                                    Problem Solving
+                                    <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">⌘A</kbd>
+                                </a>
+                            </MenuItem>
+                            <div className="my-1 h-px bg-white/5" />
+                            <MenuItem>
+                                <a href="#projects" className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+                                    {/* <TrashIcon className="size-4 fill-white/30" /> */}
+                                    Projects
+                                    <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">⌘D</kbd>
+                                </a>
+                            </MenuItem>
+                            <div className="my-1 h-px bg-white/5" />
+                            <MenuItem>
+                                <a href="#blogs" className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+                                    {/* <TrashIcon className="size-4 fill-white/30" /> */}
+                                    Blogs
+                                    <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">⌘D</kbd>
+                                </a>
+                            </MenuItem>
+                            <div className="my-1 h-px bg-white/5" />
+                            <MenuItem>
+                                <a href="#social" className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+                                    {/* <TrashIcon className="size-4 fill-white/30" /> */}
+                                    Social
+                                    <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">⌘D</kbd>
+                                </a>
+                            </MenuItem>
+                            <div className="my-1 h-px bg-white/5" />
+                            <MenuItem>
+                                <a href="#contact-me" className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+                                    {/* <TrashIcon className="size-4 fill-white/30" /> */}
+                                    Contact Me
+                                    <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">⌘D</kbd>
+                                </a>
+                            </MenuItem>
+                            <div className="my-1 h-px bg-white/5" />
+                        </MenuItems>
+                    </Menu>
                 </div>
             </div>
         </div>
