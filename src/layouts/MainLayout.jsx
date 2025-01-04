@@ -1,24 +1,28 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Container from "../components/Container";
 
 
 const MainLayout = () => {
     return (
-        <div className="">
+        <div className="relative">
             {/* header section */}
             <header>
                 {/* navbar */}
-                <nav className="max-w-[1520px] mx-auto px-4 xl:px-0">
+                <nav>
                     <Navbar></Navbar>
                 </nav>
+
             </header>
             {/* main section */}
-            <main>
+            <main className="pt-[112px]">
                 <Outlet></Outlet>
             </main>
             {/* footer section */}
-            <footer>
-
+            <footer className="pt-20 pb-10">
+                <Container>
+                    <p className="text-center text-xl">Arigato gozaimasu for visting my portfolio.</p>
+                </Container>
             </footer>
         </div>
     );

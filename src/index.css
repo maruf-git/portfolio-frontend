@@ -6,21 +6,35 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* custom fonts */
 .font-logo {
     font-family: 'Agustina', sans-serif;
 }
-.font-main{
+
+.font-main {
     font-family: "Montserrat", serif;
 }
+
 /* background color */
-.bg-portDark{
+.bg-portDark {
     background-color: #171c28
 }
+
 /* theme */
-.style-dark{
+.style-dark {
     background-color: #171c28;
     color: #fff;
 }
 
-/* nav link styles */
+/* problem solving cards box shadow */
+.problem-solving-card {
+    box-shadow: 0 10px 30px -15px #aba9af;
+    transition: all .25s ease;
+}
+.problem-solving-card:hover{
+    box-shadow: 0 10px 30px 0px #aba9af;
+}
