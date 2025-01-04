@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 const MainLayout = () => {
     return (
-        <div className="style-dark font-main">
+        <div className="">
             {/* header section */}
             <header>
                 {/* navbar */}
