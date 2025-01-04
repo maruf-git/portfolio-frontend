@@ -3,10 +3,9 @@ import { FaGithub } from "react-icons/fa";
 import Container from "../components/Container";
 import { IoMail } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
-// import greetingLottie from '../assets/lottie/greeting-lottie.json';
-// import Lottie from "lottie-react";
-import { Player } from "@lottiefiles/react-lottie-player";
-import greetingThemeLottie from "../../public/lottie1.lottie"
+import greetingDark from '../assets/lottie/greeting-dark.json';
+import Lottie from "lottie-react";
+
 
 
 const Home = () => {
@@ -54,17 +53,10 @@ const Home = () => {
                         </div>
                     </div>
                     {/* greeting image */}
-                    <div className="w-1/2 bg-transparent">
-                        {/* <Lottie 
-                        animationData={greetingLottie} 
-                        className="!bg-transparent bg-blue-500"
-                        /> */}
-                        <Player
-                            autoplay
-                            loop
-                            // src={'/public/lottie1.lottie'}
-                            src={greetingThemeLottie}
-                            style={{ width: '100%', height: '100%', backgroundColor: 'transparent' }}
+                    <div className="w-1/2  overflow-hidden flex justify-center items-center">
+                        <Lottie
+                            animationData={greetingDark}
+                            className="object-cover scale-150 max-w-none"
                         />
                     </div>
                 </section>
