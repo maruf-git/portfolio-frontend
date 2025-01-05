@@ -125,7 +125,7 @@ const Home = () => {
                                 {/* frontend */}
                                 <p className="text-3xl"><span className="text-[#6600ff]">Frontend: </span> HTML | CSS | Tailwind | DaisyUI | React</p>
                                 {/* backend */}
-                                <p className="text-3xl"><span className="text-[#6600ff]">Frontend: </span> Express.Js | Node.Js | Firebase | DaisyUI | MongoDB</p>
+                                <p className="text-3xl"><span className="text-[#6600ff]">Backend: </span> Express.Js | Node.Js | Firebase  | MongoDB</p>
                                 {/* Tools */}
                                 <p className="text-3xl"><span className="text-[#6600ff]">Tools: </span> Git | Chrome Dev Tool</p>
                             </div>
@@ -241,16 +241,16 @@ const Home = () => {
                                     modules={[Autoplay, Pagination, Navigation]}
                                     className="mySwiper"
                                 >
-                                    <SwiperSlide>
+                                    <SwiperSlide className="">
                                         <img className=" w-full object-cover" src={view1} alt="" />
                                     </SwiperSlide>
-                                    <SwiperSlide>
+                                    <SwiperSlide lassName="">
                                         <img className=" w-full object-cover" src={view2} alt="" />
                                     </SwiperSlide>
-                                    <SwiperSlide>
+                                    <SwiperSlide lassName="">
                                         <img className=" w-full object-cover" src={view3} alt="" />
                                     </SwiperSlide>
-                                    <SwiperSlide>
+                                    <SwiperSlide lassName="">
                                         <img className=" w-full object-cover" src={view4} alt="" />
                                     </SwiperSlide>
 

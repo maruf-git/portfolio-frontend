@@ -10,15 +10,15 @@ const MainLayout = () => {
             {/* header section */}
             <header>
                 {/* navbar */}
-                <Headroom
+                {/* <Headroom
                     style={{
                         zIndex: '1000'
                     }}
                 >
-                    <nav>
-                        <Navbar></Navbar>
-                    </nav>
-                </Headroom>
+                </Headroom> */}
+                <nav>
+                    <Navbar></Navbar>
+                </nav>
             </header>
             {/* main section */}
             <main className="">
@@ -30,7 +30,7 @@ const MainLayout = () => {
                     <p className="text-center text-xl">Arigato gozaimasu for visting my portfolio.</p>
                 </Container>
             </footer>
-        </div>
+        </div >
     );
 };
 
